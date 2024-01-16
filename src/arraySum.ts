@@ -13,5 +13,10 @@
  * 輸出: 0
  */
 export function arraySum(numbers: number[]): number {
+    let sum=0;
     // 在此實現函式
+    numbers.map((item)=>{
+        sum +=item
+    })
+    return sum
 }

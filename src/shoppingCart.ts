@@ -22,6 +22,12 @@ export function createShoppingCart() {
      */
     function getTotalPrice() {
         // 請在此處寫下你的程式碼
+        let totalPrice:number=0;
+        items.forEach((item)=>{
+            totalPrice += item.price;
+
+        });
+        return totalPrice
     }
 
     function getItemCount() {

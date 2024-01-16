@@ -5,5 +5,26 @@
  * @returns - 回傳一個 Promise，該 Promise resolve 的值應該是從 URL 取得的資料
  */
 
-// 請在下方寫下你的程式碼
 
+
+// 請在下方寫下你的程式碼
+import 'node-fetch';
+interface DataProps {
+  id: number,
+  title: string,
+  userId: number,
+  completed: boolean
+}
+
+// 請在下方寫下你的程式碼
+export function fetchData(url: string): Promise<DataProps> {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      resolve(data);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}

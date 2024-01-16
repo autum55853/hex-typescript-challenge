@@ -8,12 +8,14 @@
 
 export function asyncSum(numbers: number[]): Promise<number> {
     return new Promise((resolve, reject) => {
-        try {
-            // 請在此處寫下你的程式碼
-        } catch (error) {
-            reject(error);
-        }
-    });
+    // 使用 setTimeout 模擬一個異步操作
+    // setTimeout(() => {
+    //   // 使用 Array.reduce 計算陣列總和
+    //   const sum = numbers.reduce((acc, num) => acc + num, 0);
+    //   resolve(sum);
+    // }, 0);
+    resolve(numbers.reduce((acc, num) => acc + num, 0))
+  });
 }
 
 
